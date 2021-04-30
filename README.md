@@ -1,7 +1,7 @@
 # forum
  
-Mini-framework.
-
+Mini-framework
+PHP orienté objet
 Emploi du MVC (Modèle-Vue-Contrôleur)
 
 Fonctionnalités :
