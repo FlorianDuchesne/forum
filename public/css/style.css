@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: #33cc99;
+}
+
+header figure h1 {
+  top: 30px;
+  left: 35px;
+  color: whitesmoke;
+  font-family: "Pangolin", cursive;
+}
+
+header input,
+button {
+  border-radius: 5px;
+  border-style: none;
+}
+
+header input {
+  width: 300px;
+}
+
+#login {
+  background-color: #006666;
+  border-radius: 10px;
+  color: whitesmoke;
+  /* text-transform: uppercase; */
+  font-family: "Pangolin", cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background-color: #006666;
+}
+
+nav a {
+  color: whitesmoke;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Pangolin", cursive;
+}
+
+nav a:hover {
+  color: whitesmoke;
+}
+
+footer {
+  background-color: #006666;
+  color: whitesmoke;
+  text-align: center;
+}
+
+main h1 {
+  margin: 1em;
+  color: #006666;
+  margin-left: 2em;
+}
+
+#galerie {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2em;
+}
+
+#galerie img {
+  width: 350px;
+  filter: brightness(80%);
+}
+
+#galerie figure {
+  position: relative;
+}
+
+#galerie figcaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: x-large;
+  text-align: center;
+  color: whitesmoke;
+}
+
+#bienvenue figure {
+  overflow: hidden;
+  height: 300px;
+  margin-top: 2em;
+}
+
+#bienvenue img {
+  transform: translateY(-190px);
+}
+
+#bienvenue figcaption {
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Pangolin", cursive;
+}
+
+#bienvenue a {
+  text-decoration: none;
+  color: black;
+}
+
+.voirLien {
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+  text-decoration: none;
+  color: #006666;
+}
+
+table td,
+th {
+  min-width: 100px;
+  /* border: solid black 1px; */
+  padding: 0.5em;
+  text-align: center;
+}
+
+thead :first-child {
+  border-radius: 10px 0px 0px 0px;
+}
+
+thead :last-child {
+  border-radius: 0px 10px 0px 0px;
+}
+
+table {
+  margin: 2em;
+}
+
+.detailTopic table {
+  width: 80vw;
+}
+
+table th {
+  background-color: #006666;
+  color: whitesmoke;
+}
+
+table td {
+  background-color: #33cc99;
+  border-bottom: solid #006666 1px;
+}
+
+#sujets {
+  position: relative;
+  margin: 3em;
+}
+
+#sujets .voirLien {
+  bottom: -30px;
+  right: 10px;
+}
+
+.log {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.log form {
+  color: whitesmoke;
+  background-color: #006666;
+  border-radius: 10px;
+  margin: 3em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.log form label {
+  padding: 0.2em 0.2em;
+}
+
+#visuelCategory {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+#visuelCategory img {
+  /* position: absolute; */
+  transform: translateY(-300px);
+}
+
+#visuelCategory figcaption h1 {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: xxx-large;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.detailTopic table {
+  margin: 0em;
+}
+
+.detailTopic table td {
+  text-align: left;
+}
+
+.detailTopic table th {
+  background-color: #33cc99;
+  text-align: end;
+}
+
+.detailTopic figure {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: aquamarine;
+  width: 80%;
+  margin: auto;
+}
+
+.detailTopic figure blockquote {
+  font-style: italic;
+  margin: 1em;
+}
+
+.detailTopic p {
+  margin: 1em;
+}
+
+#newMessage {
+  display: none;
+}
+
+#newMessage form textarea {
+  width: 80vw;
+}
+
+#edit {
+  width: 80vw;
+}
+
+#edit textarea {
+  width: 60vw;
+}
