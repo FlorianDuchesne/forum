@@ -1,8 +1,8 @@
 # forum
  
-Mini-framework
-PHP orienté objet
-Emploi du MVC (Modèle-Vue-Contrôleur)
+Mini-framework <br>
+PHP orienté objet <br>
+Emploi du MVC (Modèle-Vue-Contrôleur) <br>
 
 Fonctionnalités :
 inscription et connexion d'un utilisateur.
