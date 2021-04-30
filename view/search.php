@@ -32,20 +32,7 @@ if (!empty($data['resultsTopics'])) {
 
 if (!empty($data['resultsMessages'])) {
   foreach ($data['resultsMessages'] as $message) {
-    echo "<div class='container'>";
-    echo "<h4> A l'intérieur du topic suivant : </h4>";
-    echo "<table class='container m-3'>
-    <thead>
-      <th>Sujet</th>
-      <th>Création du sujet</th>
-      <th>Catégorie</th>
-    </thead>
-    <tbody><tr><td><a href='?ctrl=topic&method=detailTopicById&id=" . $message->getTopic()->getId() . "'>" . $message->getTopic()->getTitle() . "</a></td>
-          <td><small>" . $message->getTopic()->getDateCreation() . " par <a href='?ctrl=user&method=detailUser&id=" . $message->getTopic()->getUser()->getId() . "'>" . $message->getTopic()->getUser()->getPseudo() . "</a></small></td>
-          <td>" . $message->getTopic()->getCategory()->getName() . "</td></tr></tbody></table>";
-
-    // echo $message->getContent();
-    echo "<h4> Message(s) correspondant à la recherche : </h4>";
+    echo "<div class='container'><h4> Message(s) correspondant à la recherche : </h4>";
 
     echo "<div class='m-3 container detailTopic'>
     <table class='m-auto'>
@@ -61,7 +48,8 @@ if (!empty($data['resultsMessages'])) {
           </td>
         </tr>
       </tbody>
-    </table></div></div>";
+    </table></div>";
+    echo "<a href='?ctrl=topic&method=detailTopicById&id=" . $message->getTopic()->getId() . "'>Aller au sujet du message <i class='fas fa-external-link-alt'></i></a></div>";
   }
 }
 

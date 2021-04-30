@@ -18,7 +18,7 @@ $user = $data['user']
 </ul>
 
 <h1>Sujets créés par <?= $user->getPseudo() ?></h1>
-<ul>
+<ul class="container">
   <?php
   foreach ($data['topics'] as $topic) {
     echo "<li>" . $topic->getTitle() . " <a href='?ctrl=topic&method=detailTopicById&id=" . $topic->getId() . "'><i class='fas fa-external-link-alt'></i></a></li>";
