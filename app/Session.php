@@ -60,4 +60,19 @@ abstract class Session
             Router::redirectTo("security", "login");
         }
     }
+
+    // Créer un token que je mets en session.
+    // générer le token de la session pour le comparer à celui du formulaire.
+
+    public static function generateKey()
+    {
+        if (!isset($_SESSION['key']) || $_SESSION['key'] === null) {
+            $_SESSION['key'] = bin2hex(random_bytes(32));
+        }
+    }
+
+    public static function getKey()
+    {
+        return $_SESSION['key'];
+    }
 }

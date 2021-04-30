@@ -14,6 +14,7 @@ var_dump($data);
       <label for="imgPath">imgPath</label>
       <input type="text" name="imgPath" id="categorie" value="<?= $data['category']->getImg() ?>">
     </div>
+    <input name="token" type="hidden" value="<?= $token ?>">
     <button type="submit" class="m-3">
       <label for="submit" class="form-label">Modifier</label>
     </button>

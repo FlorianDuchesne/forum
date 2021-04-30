@@ -8,6 +8,7 @@
       <label for='message'>Message :</label>
       <textarea name='message' id='message' required><?= $data['message']->getContent() ?></textarea>
       <input type='hidden' name='idMessage' value=<?= $data['message']->getId() ?>>
+      <input name="token" type="hidden" value="<?= $token ?>">
       <button type='submit' class='m-3'>Valider</button>
     </form>
   </div>

@@ -70,7 +70,7 @@ if (App\Session::getUser()) {
   </div>";
     if (App\Session::getAdmin()) {
       echo "<p><a href='?ctrl=admin&method=lock&id=" . $topic->getId() . "'>Fermer le sujet</a></p>";
-      echo "<p><a href='?ctrl=admin&method=deleteTopic&id=" . $topic->getId() . "'>Supprimer le topic</a></p></div>";
+      echo "<p><a href='?ctrl=topic&method=deleteTopic&id=" . $topic->getId() . "'>Supprimer le topic</a></p></div>";
     }
   } else {
     echo "<div class='container'><p>Le sujet a été fermé</p></div>";

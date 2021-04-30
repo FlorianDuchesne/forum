@@ -84,4 +84,37 @@ class UserController
       ];
     }
   }
+
+  public function deleteUser()
+  {
+
+    $id = (isset($_GET['id'])) ? $_GET['id'] : null;
+    $userModel = new UserManager;
+    $messageModel = new MessageManager;
+    $topicModel = new TopicManager;
+    $user = $userModel->findOneById($id);
+    $messages = $messageModel->findMessagesByUser($id);
+    if (isset($messages)) {
+      foreach ($messages as $value) {
+        $idValue = $value->getId();
+        $messageModel->deleteMessageById($idValue);
+      }
+    }
+    $topics = $topicModel->findTopicsByUser($id);
+    if (isset($topics)) {
+      foreach ($topics as $value) {
+
+        $idTopic = $value->getId();
+        $messagesTopic = $messageModel->findMessagesByTopic($idTopic);
+        foreach ($messagesTopic as $value) {
+          $idValue = $value->getId();
+          $messageModel->deleteMessageById($idValue);
+        }
+
+        $topicModel->deleteTopic($idTopic);
+      }
+    }
+    $userModel->deleteUser($id);
+    header("Location: ?ctrl=user&method=UsersList");
+  }
 }

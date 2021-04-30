@@ -24,6 +24,7 @@
       </a>
       <form action="?ctrl=home&method=search" method="post" class="col-6">
         <input type="search" name="search" />
+        <input name="token" type="hidden" value="<?= $token ?>">
         <button type="submit"><i class="fas fa-search"></i></button>
       </form>
       <?php

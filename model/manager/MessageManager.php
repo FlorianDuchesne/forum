@@ -55,17 +55,6 @@ class MessageManager extends AbstractManager
     );
   }
 
-
-  // public function findUserbyMessageId($id)
-  // {
-  //   $sql = "SELECT m.`user_id`, u.pseudo FROM `message` m INNER JOIN user u ON u.`id_user` = m.user_id WHERE `id_message` = :id";
-
-  //   return self::getResults(
-  //     self::select($sql, ["id" => $id], false),
-  //     self::$classname
-  //   );
-  // }
-
   public function countMessagesByTopic($id)
   {
     $sql = "SELECT COUNT(id_message) AS nbMessages FROM message m WHERE topic_id = :id";

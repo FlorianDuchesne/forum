@@ -37,4 +37,21 @@ abstract class Router
         header("Location:?ctrl=" . $ctrl . "&method=" . $method);
         die();
     }
+
+    public static function CSRFProtection($token)
+    {
+        // Si mon formulaire n'est pas vide,
+        if (!empty($_POST)) {
+            // Je vérifie que le champ hidden 'token' de mon formulaire n'est pas vide,
+            if (isset($_POST['token'])) {
+                $form_crsf = $_POST['token'];
+                if (hash_equals($form_crsf, $token)) {
+
+                    return true;
+                }
+            }
+            return false;
+        }
+        return true;
+    }
 }

@@ -1,4 +1,4 @@
-<div class="log">
+<!-- <div class="log">
   <h1>Inscription</h1>
 
   <form class="col-4" method="POST" action="?ctrl=user&method=confirmSignin">
@@ -25,4 +25,4 @@
 
   </form>
 
-</div>
+</div> -->

@@ -27,7 +27,7 @@ $user = $data['user']
 </ul>
 <?php
 if (App\Session::getAdmin()) {
-  echo "<div class='container'><a href='?ctrl=admin&method=deleteUser&id=" . $user->getId() . "'>Supprimer ce compte user</a></div>";
+  echo "<div class='container'><a href='?ctrl=user&method=deleteUser&id=" . $user->getId() . "'>Supprimer ce compte user</a></div>";
   echo "<br>";
   echo "<div class='container'><a href='?ctrl=admin&method=login'>Panneau admin</a></div>";
 }

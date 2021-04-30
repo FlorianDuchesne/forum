@@ -17,6 +17,7 @@
       <br>
       <label for='message'>Réponse :</label>
       <textarea name='message' id='message' required></textarea>
+      <input name="token" type="hidden" value="<?= $token ?>">
       <button type='submit' class='m-3'>Valider</button>
     </form>
   </div>

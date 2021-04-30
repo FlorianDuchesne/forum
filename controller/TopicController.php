@@ -191,4 +191,18 @@ class TopicController
       ]
     ];
   }
+
+  public function deleteTopic()
+  {
+    $id = (isset($_GET['id'])) ? $_GET['id'] : null;
+    $topicModel = new TopicManager;
+    $messageModel = new MessageManager;
+    $messages = $messageModel->findMessagesByTopic($id);
+    foreach ($messages as $value) {
+      $idValue = $value->getId();
+      $messageModel->deleteMessageById($idValue);
+    }
+    $topicModel->deleteTopic($id);
+    header("Location: ?ctrl=topic&method=TopicsList");
+  }
 }

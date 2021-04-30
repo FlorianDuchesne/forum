@@ -19,7 +19,21 @@ define('SERVICE_PATH', ROOT_DIR . 'app' . DS);
 // define('MODEL_PATH')
 // define('ENTITY_PATH', )
 
-$result = Router::handleRequest($_GET);
+// A chaque requête…
+// On demande à la session de générer une clé propre à elle-même.
+Session::generateKey();
+// On va générer un token pour cette requête http seulement
+$token = hash_hmac("sha256", "phrase_secrete", Session::getKey());
+
+// On va vérifier que la protection mise dans le Router renvoie true
+if (Router::CSRFProtection($token)) {
+  // On va autoriser le contrôleur à traiter la demande
+  // On continue la démarche normale
+  $result = Router::handleRequest($_GET);
+} else {
+  Router::redirectTo("security", "logout");
+}
+
 
 ob_start();
 

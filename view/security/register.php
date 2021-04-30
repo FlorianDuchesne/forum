@@ -18,6 +18,7 @@
       <label for="confirmPassword" class="form-label">Confirmez le mot de passe</label>
       <input name="confirmPassword" type="password" class="form-control" id="confirmPassword" placeholder="bouboulou">
     </div>
+    <input name="token" type="hidden" value="<?= $token ?>">
     <button class="mb-3" type="submit">
       <label for="submit" class="form-label">Valider</label>
     </button>

@@ -1,4 +1,6 @@
-<h2>nouveau sujet</h2>
+<div class="container m-3">
+  <h2>nouveau sujet</h2>
+</div>
 <div class="log">
   <form action="?ctrl=topic&method=createTopic" method="post">
     <div class="form-group  d-flex flex-column m-3">
@@ -15,10 +17,6 @@
           echo "value='" . $value->getID() . "'>" . $value->getName() . "</option>";
         }
         ?>
-        <!-- <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option> -->
       </select>
     </div>
     <div class="form-group  d-flex flex-column m-3">
@@ -30,7 +28,7 @@
       <textarea name="message" id="message"></textarea>
     </div>
     <input type="hidden" name="user" value="<?= $data['idUser'] ?>">
-
+    <input name="token" type="hidden" value="<?= $token ?>">
     <button type="submit">Valider</button>
   </form>
 </div>

@@ -13,6 +13,7 @@ if (App\Session::getUser()) {
 
     <div class="m-3"><input name="email" type="text" placeholder="email" required></div>
     <div class="m-3"><input name="password" type="password" placeholder="mot de passe" required></div>
+    <input name="token" type="hidden" value="<?= $token ?>">
     <div class="m-3"><button type="submit">Valider</button></div>
   </form>
 </div>
