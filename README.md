@@ -13,4 +13,4 @@ Un utilisateur au statut d'administrateur peut rajouter et modifier des catégor
 La barre de recherche est fonctionnelle et cherche du contenu parmi les sujets, messages et utilisateurs.
 
 Prévention des failles XSS avec l'emploi de filter_input et des injections SQL avec des requêtes préparées.
-Prévention des failles CSRF encore à venir. 
+Prévention des failles CSRF avec des jetons d'authentification (tokens). 
